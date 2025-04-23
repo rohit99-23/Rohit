@@ -1,0 +1,22 @@
+*{
+  background-color : rgb(86, 200, 210);
+}
+nav{
+  display: inline;
+  float: right;
+  text-decoration: none;
+  
+}
+
+h1{
+  text-align: center;
+}
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+
+
+
