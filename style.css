@@ -65,4 +65,40 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
   }
-  
+  /* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    height: 90px;
+  }
+
+  .letter {
+    font-size: 4.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+    height: 70px;
+  }
+
+  .letter {
+    font-size: 3.5rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px; /* thoda left right space de dena mobile ke liye */
+  }
+
+  .ring {
+    border-width: 12px; /* ring ka thickness kam kar diya mobile me */
+  }
+}
