@@ -52,7 +52,7 @@ const Experience = () => {
 
   const workExperience = [
     {
-      title: 'Multi-technology Creator Program',
+      title: 'Multi-technology: The Creator Program',
       company: 'Linux World Informatics Pvt Ltd',
       period: '2 Months',
       location: 'Virtual/Remote',
