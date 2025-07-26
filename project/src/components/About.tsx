@@ -27,16 +27,17 @@ const About = () => {
     { year: '2020', event: 'Completed Secondary Education (10th)', icon: '🎓', type: 'education' },
     { year: '2022', event: 'Completed Senior Secondary (12th)', icon: '📚', type: 'education' },
     { year: '2022', event: 'Started B.Tech in Computer Science', icon: '💻', type: 'education' },
-    { year: '2023', event: 'Linux World Informatics Program', icon: '🐧', type: 'experience' },
     { year: '2024', event: 'CodeSoft C++ Programmer Internship', icon: '⚡', type: 'experience' },
+    { year: '2025', event: 'Summer Internship at Linux World Informatics Program', icon: '🐧', type: 'experience' },
     { year: '2026', event: 'Expected B.Tech Graduation', icon: '🎯', type: 'education' }
+    
   ];
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-space-grotesk font-bold text-center mb-16">
-          <span className="text-neon-green">$</span> whoami
+          <span className="text-neon-green">$</span> who am I
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -49,7 +50,7 @@ const About = () => {
                 </div>
               </div>
               <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center">
-                <span className="text-black font-bold">👋</span>
+                <span className="text-black font-bold">DevOps Engineer</span>
               </div>
             </div>
             
