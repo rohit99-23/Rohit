@@ -1,69 +1,84 @@
 import React, { useState } from 'react';
-import { Server, Cloud, Settings, GitBranch, Code, Database, Monitor, Terminal } from 'lucide-react';
+import {
+  Server,
+  Cloud,
+  Settings,
+  GitBranch,
+  Code,
+  Database,
+  Monitor,
+  Terminal
+} from 'lucide-react';
 
 const Skills = () => {
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
-
   const skillCategories = [
     {
       title: 'DevOps Tools',
       icon: <Settings className="w-8 h-8" />,
-      skills: [
-        { name: 'Jenkins', level: 75, color: 'from-red-500 to-orange-500' },
-        { name: 'Docker', level: 80, color: 'from-blue-400 to-blue-600' },
-        { name: 'Git', level: 85, color: 'from-gray-600 to-gray-800' },
-        { name: 'GitHub', level: 90, color: 'from-gray-800 to-black' },
-      ]
+        skills: [
+          { name: 'Jenkins', color: 'from-red-500 to-orange-500' },
+          { name: 'Docker', color: 'from-blue-400 to-blue-600' },
+          { name: 'Git', color: 'from-gray-600 to-gray-800' },
+          { name: 'GitHub', color: 'from-gray-800 to-black' },
+          { name: 'Ansible', color: 'from-yellow-600 to-yellow-800' },
+          { name: 'Prometheus', color: 'from-pink-500 to-pink-700' },
+          { name: 'Grafana', color: 'from-amber-500 to-orange-600' },
+          { name: 'Kubernetes', color: 'from-indigo-500 to-indigo-800' }
+        ]
+        
     },
     {
       title: 'Programming Languages',
       icon: <Code className="w-8 h-8" />,
       skills: [
-        { name: 'C++', level: 85, color: 'from-blue-500 to-blue-700' },
-        { name: 'Python', level: 80, color: 'from-yellow-500 to-blue-500' },
-        { name: 'Bash', level: 75, color: 'from-green-500 to-green-700' },
-        { name: 'HTML/CSS', level: 70, color: 'from-orange-500 to-pink-500' },
+        { name: 'C++', color: 'from-blue-500 to-blue-700' },
+        { name: 'Python', color: 'from-yellow-500 to-blue-500' },
+        { name: 'Bash', color: 'from-green-500 to-green-700' },
+        { name: 'HTML/CSS', color: 'from-orange-500 to-pink-500' }
       ]
     },
     {
       title: 'Frameworks & Technologies',
       icon: <Server className="w-8 h-8" />,
       skills: [
-        { name: 'Flask', level: 75, color: 'from-gray-500 to-gray-700' },
-        { name: 'Streamlit', level: 80, color: 'from-red-400 to-red-600' },
-        { name: 'Flask APIs', level: 75, color: 'from-green-400 to-green-600' },
-        { name: 'pyttsx3', level: 70, color: 'from-purple-400 to-purple-600' },
+        { name: 'Flask', color: 'from-gray-500 to-gray-700' },
+        { name: 'Streamlit', color: 'from-red-400 to-red-600' },
+        { name: 'Flask APIs', color: 'from-green-400 to-green-600' },
+        { name: 'pyttsx3', color: 'from-purple-400 to-purple-600' }
       ]
     },
     {
       title: 'Core Concepts',
       icon: <Terminal className="w-8 h-8" />,
       skills: [
-        { name: 'OOP', level: 85, color: 'from-blue-400 to-blue-600' },
-        { name: 'CI/CD', level: 75, color: 'from-green-500 to-blue-500' },
-        { name: 'Client-Server', level: 80, color: 'from-purple-500 to-pink-500' },
-        { name: 'SDLC', level: 75, color: 'from-orange-500 to-red-500' },
-        { name: 'Machine Learning', level: 70, color: 'from-indigo-500 to-purple-500' },
-      ]
+        { name: 'OOP', color: 'from-blue-400 to-blue-600' },
+        { name: 'CI/CD', color: 'from-green-500 to-blue-500' },
+        { name: 'Client-Server', color: 'from-purple-500 to-pink-500' },
+        { name: 'SDLC', color: 'from-orange-500 to-red-500' },
+        { name: 'Machine Learning', color: 'from-indigo-500 to-purple-500' },
+        { name: 'Dockerfile', color: 'from-cyan-500 to-blue-600' },
+        { name: 'Docker Compose', color: 'from-yellow-500 to-orange-500' },
+        { name: 'Ansible Playbook', color: 'from-red-500 to-yellow-500' }
+      ]      
     },
     {
       title: 'Tools & IDEs',
       icon: <Monitor className="w-8 h-8" />,
       skills: [
-        { name: 'VS Code', level: 90, color: 'from-blue-500 to-blue-700' },
-        { name: 'Figma', level: 70, color: 'from-purple-500 to-pink-500' },
-        { name: 'Streamlit Cloud', level: 75, color: 'from-red-400 to-red-600' },
+        { name: 'VS Code', color: 'from-blue-500 to-blue-700' },
+        { name: 'Figma', color: 'from-purple-500 to-pink-500' },
+        { name: 'Streamlit Cloud', color: 'from-red-400 to-red-600' }
       ]
     },
     {
       title: 'Database & OS',
       icon: <Database className="w-8 h-8" />,
       skills: [
-        { name: 'MongoDB', level: 75, color: 'from-green-500 to-green-700' },
-        { name: 'JSON', level: 85, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Windows', level: 90, color: 'from-blue-500 to-blue-700' },
-        { name: 'RHEL', level: 70, color: 'from-red-500 to-red-700' },
-        { name: 'Ubuntu', level: 75, color: 'from-orange-500 to-orange-700' },
+        { name: 'MongoDB', color: 'from-green-500 to-green-700' },
+        { name: 'JSON', color: 'from-yellow-500 to-orange-500' },
+        { name: 'Windows', color: 'from-blue-500 to-blue-700' },
+        { name: 'RHEL', color: 'from-red-500 to-red-700' },
+        { name: 'Ubuntu', color: 'from-orange-500 to-orange-700' }
       ]
     }
   ];
@@ -92,28 +107,15 @@ const Skills = () => {
 
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="relative"
-                    onMouseEnter={() => setHoveredSkill(`${categoryIndex}-${skillIndex}`)}
-                    onMouseLeave={() => setHoveredSkill(null)}
-                  >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300 font-mono text-sm">{skill.name}</span>
-                      <span className="text-neon-green font-mono text-sm">{skill.level}%</span>
-                    </div>
-                    
+                  <div key={skillIndex}>
+                    <span className="text-gray-300 font-mono text-sm mb-1 block">
+                      {skill.name}
+                    </span>
                     <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                       <div
-                        className={`h-full bg-gradient-to-r ${skill.color} transition-all duration-700 ease-out relative`}
-                        style={{
-                          width: hoveredSkill === `${categoryIndex}-${skillIndex}` 
-                            ? `${skill.level}%` 
-                            : '0%'
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-                      </div>
+                        className={`h-full bg-gradient-to-r ${skill.color} relative animate-pulse group-hover:animate-none`}
+                        style={{ width: '100%' }}
+                      />
                     </div>
                   </div>
                 ))}
@@ -144,7 +146,9 @@ const Skills = () => {
                 <h4 className="text-lg font-space-grotesk font-bold text-white mb-2">
                   {domain.name}
                 </h4>
-                <div className={`w-full h-2 bg-gradient-to-r ${domain.color} rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div
+                  className={`w-full h-2 bg-gradient-to-r ${domain.color} rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300`}
+                />
               </div>
             ))}
           </div>
