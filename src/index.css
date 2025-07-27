@@ -6,6 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --neon-green: #00ff88;
+  --sky-blue: #00d4ff;
+  --bg-primary: #000000;
+  --bg-secondary: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,28 +26,29 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00ffaa, #00aaff);
+  background: var(--neon-green);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00aaff, #00ffaa);
+  background: #00cc6a;
 }
 
 /* Animations */
@@ -54,7 +64,7 @@ body {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 /* Terminal cursor animation */
@@ -78,7 +88,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #00ffaa, #00aaff);
+  background: linear-gradient(135deg, var(--neon-green), var(--sky-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -196,10 +206,91 @@ button, a, input, textarea {
 }
 
 .project-card::-webkit-scrollbar-thumb {
-  background: rgba(0, 255, 170, 0.3);
+  background: var(--neon-green);
   border-radius: 2px;
 }
 
 .project-card::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 255, 170, 0.5);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Theme transition classes */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light theme overrides */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-primary: #000000;
+  --text-secondary: #374151;
+}
+
+.light body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Typing animation for Hero section */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Particle background animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.particle {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
 }

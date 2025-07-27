@@ -10,6 +10,10 @@ const About = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
+            // Remove the opacity-0 class after animation
+            setTimeout(() => {
+              entry.target.classList.remove('opacity-0');
+            }, 1000);
           }
         });
       },
