@@ -8,7 +8,8 @@ const Hero = () => {
 
   const lines = [
     "Hi, I'm Rohit Kumar.",
-    "DevOps Engineer | Cloud Builder | Automation Enthusiast"
+    "DevOps Engineer |Final Year B.Tech CSE",
+    "Automating the future of software delivery, one pipeline at a time."
   ];
 
   useEffect(() => {
