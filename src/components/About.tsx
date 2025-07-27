@@ -41,44 +41,7 @@ const About = () => {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Section */}
-          <div className="text-center lg:text-left">
-            <div className="relative inline-block mb-8">
-              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
-                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                  {/* Profile Image - Replace with your actual image */}
-                  <img 
-                    src="/profile.jpg" 
-                    alt="Rohit Kumar" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to icon if image doesn't exist
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  <User className="w-24 h-24 text-neon-green hidden" />
-                </div>
-              </div>
-              {/* DevOps Engineer Badge */}
-              <div className="absolute -bottom-2 -right-2 bg-neon-green text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-gray-900">
-                DevOps Engineer
-              </div>
-            </div>
-            
-            {/* Bio Section */}
-            <div className="text-left max-w-lg">
-              <p className="text-gray-300 leading-relaxed mb-6">
-                I come from a strong technical background with a growing passion for DevOps, automation, and cloud infrastructure. My journey started with exploring development, but I soon found my interest leaning toward solving real-world challenges related to deployment, scalability, and system reliability.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                Over time, I've worked on building CI/CD pipelines, managing cloud resources, and integrating tools like Docker, Jenkins, Git, and AWS to improve workflow efficiency. I enjoy learning new technologies, experimenting with modern DevOps practices, and creating systems that are both stable and flexible.
-              </p>
-            </div>
-          </div>
-
-          {/* Console Log Section */}
+          {/* Console Log Section - Now on the left */}
           <div ref={codeRef} className="opacity-0 transition-opacity duration-1000">
             <div className="bg-gray-900 rounded-lg p-6 border border-neon-green/30 font-mono">
               <div className="flex items-center gap-2 mb-4">
@@ -114,6 +77,43 @@ const About = () => {
                 </div>
                 <span className="text-neon-green">{'}'}</span>
               </div>
+            </div>
+          </div>
+
+          {/* Profile Section - Now on the right */}
+          <div className="text-center lg:text-left">
+            <div className="relative inline-block mb-8">
+              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
+                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                  {/* Profile Image - Replace with your actual image */}
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Rohit Kumar" 
+                    className="w-full h-full object-cover rounded-full"
+                    onError={(e) => {
+                      // Fallback to icon if image doesn't exist
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      target.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <User className="w-24 h-24 text-neon-green hidden" />
+                </div>
+              </div>
+              {/* DevOps Engineer Badge */}
+              <div className="absolute -bottom-2 -right-2 bg-neon-green text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-gray-900">
+                DevOps Engineer
+              </div>
+            </div>
+            
+            {/* Bio Section */}
+            <div className="text-left max-w-lg">
+              <p className="text-gray-300 leading-relaxed mb-6">
+                I come from a strong technical background with a growing passion for DevOps, automation, and cloud infrastructure. My journey started with exploring development, but I soon found my interest leaning toward solving real-world challenges related to deployment, scalability, and system reliability.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Over time, I've worked on building CI/CD pipelines, managing cloud resources, and integrating tools like Docker, Jenkins, Git, and AWS to improve workflow efficiency. I enjoy learning new technologies, experimenting with modern DevOps practices, and creating systems that are both stable and flexible.
+              </p>
             </div>
           </div>
         </div>
