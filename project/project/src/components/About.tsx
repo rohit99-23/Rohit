@@ -45,25 +45,12 @@ const About = () => {
           <div className="text-center lg:text-left">
             <div className="relative inline-block mb-8">
               <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
-                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                  {/* Profile Image - Replace with your actual image */}
-                  <img 
-                    src="/profile.jpg" 
-                    alt="Rohit Kumar" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to icon if image doesn't exist
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  <User className="w-24 h-24 text-neon-green hidden" />
+                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
+                  <User className="w-24 h-24 text-neon-green" />
                 </div>
               </div>
-              {/* DevOps Engineer Badge */}
-              <div className="absolute -bottom-2 -right-2 bg-neon-green text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-gray-900">
-                DevOps Engineer
+              <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center">
+                <span className="text-black font-bold">DevOps Engineer</span>
               </div>
             </div>
             
@@ -118,34 +105,36 @@ const About = () => {
           </div>
         </div>
 
-        {/* Timeline Section */}
+        {/* Timeline */}
         <div className="mt-20">
           <h3 className="text-2xl font-space-grotesk font-bold text-center mb-12 text-neon-green">
-            My Journey
+            Journey Timeline
           </h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-neon-green/30"></div>
-              
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-neon-green to-sky-blue"></div>
+            <div className="space-y-8">
               {timeline.map((item, index) => (
-                <div key={index} className="relative flex items-start mb-8">
-                  {/* Timeline Dot */}
-                  <div className={`absolute left-2 w-4 h-4 rounded-full border-2 border-neon-green bg-gray-900 ${item.type === 'education' ? 'border-neon-green' : 'border-sky-blue'}`}></div>
-                  
-                  {/* Content */}
-                  <div className="ml-12 flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">{item.icon}</span>
-                      <span className="text-neon-green font-bold">{item.year}</span>
-                      {item.type === 'education' ? (
-                        <GraduationCap className="w-4 h-4 text-neon-green" />
-                      ) : (
-                        <Briefcase className="w-4 h-4 text-sky-blue" />
-                      )}
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className={`p-4 rounded-lg border transition-colors duration-300 ${
+                      item.type === 'education' 
+                        ? 'bg-gray-800 border-sky-blue/30 hover:border-sky-blue/60' 
+                        : 'bg-gray-800 border-neon-green/30 hover:border-neon-green/60'
+                    }`}>
+                      <div className={`font-bold text-lg ${
+                        item.type === 'education' ? 'text-sky-blue' : 'text-neon-green'
+                      }`}>
+                        {item.year}
+                      </div>
+                      <div className="text-gray-300">{item.event}</div>
                     </div>
-                    <p className="text-gray-300 ml-8">{item.event}</p>
                   </div>
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-black font-bold text-xl z-10 ${
+                    item.type === 'education' ? 'bg-sky-blue' : 'bg-neon-green'
+                  }`}>
+                    {item.icon}
+                  </div>
+                  <div className="w-1/2"></div>
                 </div>
               ))}
             </div>
