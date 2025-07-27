@@ -1,32 +1,47 @@
 # Project Images Directory
 
-This directory contains placeholder images for the portfolio projects. 
+This directory contains images for the portfolio projects and personal assets.
 
-## Image Structure
+## Project Images
+Add your project screenshots or thumbnails here with the following naming convention:
+- `myapp123.jpg` - MyApp123 project
+- `microservice.jpg` - Microservice Architecture project
+- `aiops.jpg` - AIOps Platform project
+- `mini-calculator.jpg` - Mini Task Calculator
+- `mini-game.jpg` - Mini Task Game Collection
+- `mini-chat.jpg` - Mini Task Chat Application
+- `mini-automation.jpg` - Mini Task Automation Scripts
+- `mini-web.jpg` - Mini Task Web Applications
+- `docker-basic.jpg` - Docker Basic Setup
+- `docker-web.jpg` - Docker Web Application Deployment
+- `docker-db.jpg` - Docker Database Management
+- `docker-cicd.jpg` - Docker CI/CD Pipeline
+- `docker-microservices.jpg` - Docker Microservices Architecture
+- `linux-admin.jpg` - Linux System Administration
+- `linux-network.jpg` - Linux Networking Configuration
+- `linux-automation.jpg` - Linux Automation Scripts
+- `linux-server.jpg` - Linux Server Setup
+- `linux-security.jpg` - Linux Security Hardening
+- `cpp-calculator.jpg` - C++ Calculator Application
+- `cpp-chat.jpg` - C++ Console Chat Application
+- `cpp-game.jpg` - C++ Game Development
+- `portfolio.jpg` - Personal Portfolio Website
+- `mess-app.jpg` - Mess Management Application
+- `devops-tools.jpg` - DevOps Automation Tools
 
-The following images are referenced in the projects data:
+## Personal Assets
+- `profile.jpg` - Your profile picture (recommended size: 300x300px)
+- `resume.pdf` - Your resume file (place in public folder root)
 
-- `docker-project.jpg` - Docker containerization project
-- `cicd-project.jpg` - CI/CD pipeline project  
-- `flask-project.jpg` - Flask web application
-- `streamlit-project.jpg` - Streamlit data app
-- `calculator-project.jpg` - Calculator application
-- `chat-project.jpg` - Console chat application
-- `game-project.jpg` - Game development projects
-- `zero-waste-project.jpg` - Zero waste application
-- `web-project.jpg` - Web development projects
+## Image Guidelines
+- Use JPG format for photos, PNG for graphics with transparency
+- Recommended size: 800x600px for project images
+- Keep file sizes under 500KB for optimal loading
+- Use descriptive filenames that match the project names
 
-## Current Implementation
-
-Currently, the projects use placeholder icons and gradients instead of actual images. To add real project images:
-
-1. Add your project screenshots or mockups to this directory
-2. Update the image paths in `src/data/projectsData.ts`
-3. Ensure images are optimized for web (recommended size: 400x300px)
-
-## Fallback Design
-
-If images are not available, the project cards display:
-- Category-specific icons (🐳, 🐍, ⚡, etc.)
-- Gradient backgrounds based on project category
-- Project title as text overlay 
+## Adding Images
+1. Save your image with the appropriate filename
+2. Place it in this directory
+3. The images will automatically be used by the project cards
+4. For profile image, place it as `profile.jpg` in the public folder root
+5. For resume, place it as `resume.pdf` in the public folder root 

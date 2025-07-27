@@ -50,94 +50,120 @@ export const projectsData: Project[] = [
     taskType: 'task',
     difficulty: 'advanced'
   },
+  {
+    id: 'docker-microservices',
+    title: 'Docker Microservices Architecture',
+    description: 'Microservices deployment and orchestration using Docker containers.',
+    techStack: ['Docker', 'Microservices', 'API Gateway', 'Service Discovery', 'Load Balancing'],
+    githubUrl: 'https://github.com/rohit99-23/docker-microservices',
+    image: '/images/docker-microservices.jpg',
+    category: 'docker-task',
+    featured: true,
+    taskType: 'task',
+    difficulty: 'advanced'
+  },
 
   // Major Projects
   {
-    id: 'zero-waste-platform',
-    title: 'Zero Waste Management Platform',
-    description: 'Comprehensive waste management and sustainability platform with user tracking and environmental impact metrics.',
-    techStack: ['Full Stack', 'Web Development', 'Database', 'Sustainability', 'User Management'],
-    githubUrl: 'https://github.com/rohit99-23/zero_waste',
-    liveUrl: 'https://zero-waste-demo.netlify.app',
-    image: '/images/zero-waste.jpg',
+    id: 'myapp123',
+    title: 'MyApp123 - Full Stack Application',
+    description: 'Complete full-stack web application with modern architecture and comprehensive features.',
+    techStack: ['Full Stack', 'Web Development', 'Database', 'API', 'User Management'],
+    githubUrl: 'https://github.com/rohit99-23/myapp123',
+    liveUrl: 'https://myapp123-demo.netlify.app',
+    image: '/images/myapp123.jpg',
     category: 'major-project',
     featured: true,
     taskType: 'project',
     difficulty: 'advanced'
   },
   {
-    id: 'e-commerce-platform',
-    title: 'E-Commerce Platform',
-    description: 'Complete e-commerce solution with payment integration, user management, and inventory system.',
-    techStack: ['Web Development', 'Payment Gateway', 'Database', 'User Authentication', 'Inventory Management'],
-    githubUrl: 'https://github.com/rohit99-23/ecommerce-platform',
-    image: '/images/ecommerce.jpg',
+    id: 'microservice-architecture',
+    title: 'Microservice Architecture Platform',
+    description: 'Scalable microservices platform with service discovery, load balancing, and API gateway.',
+    techStack: ['Microservices', 'API Gateway', 'Service Discovery', 'Load Balancing', 'Docker'],
+    githubUrl: 'https://github.com/rohit99-23/microservice',
+    liveUrl: 'https://microservice-demo.netlify.app',
+    image: '/images/microservice.jpg',
     category: 'major-project',
     featured: true,
     taskType: 'project',
     difficulty: 'advanced'
   },
   {
-    id: 'learning-management-system',
-    title: 'Learning Management System',
-    description: 'Educational platform with course management, student tracking, and assessment tools.',
-    techStack: ['Web Development', 'Education Tech', 'Database', 'Assessment Tools', 'User Management'],
-    githubUrl: 'https://github.com/rohit99-23/lms-platform',
-    image: '/images/lms.jpg',
+    id: 'aiops-platform',
+    title: 'AIOps Platform',
+    description: 'Artificial Intelligence for IT Operations platform with monitoring and automation.',
+    techStack: ['AI/ML', 'DevOps', 'Monitoring', 'Automation', 'Machine Learning'],
+    githubUrl: 'https://github.com/rohit99-23/aiops',
+    liveUrl: 'https://aiops-demo.netlify.app',
+    image: '/images/aiops.jpg',
     category: 'major-project',
-    featured: false,
+    featured: true,
     taskType: 'project',
     difficulty: 'advanced'
   },
 
   // Mini Projects
   {
-    id: 'calculator-app',
-    title: 'Advanced Calculator',
-    description: 'Scientific calculator with advanced mathematical functions and user-friendly interface.',
+    id: 'mini-task-calculator',
+    title: 'Mini Task Calculator',
+    description: 'Advanced calculator with scientific functions and user-friendly interface.',
     techStack: ['C++', 'OOP', 'Mathematics', 'Console I/O', 'Algorithms'],
-    githubUrl: 'https://github.com/rohit99-23/calculator',
-    image: '/images/calculator.jpg',
+    githubUrl: 'https://github.com/rohit99-23/mini-task-calculator',
+    image: '/images/mini-calculator.jpg',
     category: 'mini-project',
     featured: true,
     taskType: 'project',
     difficulty: 'beginner'
   },
   {
-    id: 'todo-app',
-    title: 'Todo List Application',
-    description: 'Simple todo list application with task management and priority features.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Local Storage', 'Web App'],
-    githubUrl: 'https://github.com/rohit99-23/todo-app',
-    image: '/images/todo.jpg',
-    category: 'mini-project',
-    featured: false,
-    taskType: 'project',
-    difficulty: 'beginner'
-  },
-  {
-    id: 'weather-app',
-    title: 'Weather Application',
-    description: 'Weather forecast application with API integration and location-based data.',
-    techStack: ['JavaScript', 'API Integration', 'Weather API', 'HTML/CSS', 'Responsive Design'],
-    githubUrl: 'https://github.com/rohit99-23/weather-app',
-    image: '/images/weather.jpg',
-    category: 'mini-project',
-    featured: false,
-    taskType: 'project',
-    difficulty: 'intermediate'
-  },
-  {
-    id: 'flask-mini-app',
-    title: 'Flask Mini Application',
-    description: 'Small Flask web application with basic CRUD operations and database integration.',
-    techStack: ['Python', 'Flask', 'SQLite', 'HTML/CSS', 'CRUD Operations'],
-    githubUrl: 'https://github.com/rohit99-23/mini-task-set.git',
-    image: '/images/flask-mini.jpg',
+    id: 'mini-task-game',
+    title: 'Mini Task Game Collection',
+    description: 'Collection of simple games with menu-driven interfaces and interactive gameplay.',
+    techStack: ['C++', 'Game Logic', 'Menu System', 'Graphics', 'Game Development'],
+    githubUrl: 'https://github.com/rohit99-23/mini-task-game',
+    image: '/images/mini-game.jpg',
     category: 'mini-project',
     featured: true,
     taskType: 'project',
     difficulty: 'intermediate'
+  },
+  {
+    id: 'mini-task-chat',
+    title: 'Mini Task Chat Application',
+    description: 'Console-based chat application with real-time messaging and user management.',
+    techStack: ['C++', 'Networking', 'Socket Programming', 'Multi-threading', 'Console I/O'],
+    githubUrl: 'https://github.com/rohit99-23/mini-task-chat',
+    image: '/images/mini-chat.jpg',
+    category: 'mini-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'intermediate'
+  },
+  {
+    id: 'mini-task-automation',
+    title: 'Mini Task Automation Scripts',
+    description: 'Collection of automation scripts for various system tasks and utilities.',
+    techStack: ['Python', 'Shell Scripting', 'Automation', 'System Administration', 'Utilities'],
+    githubUrl: 'https://github.com/rohit99-23/mini-task-automation',
+    image: '/images/mini-automation.jpg',
+    category: 'mini-project',
+    featured: false,
+    taskType: 'project',
+    difficulty: 'intermediate'
+  },
+  {
+    id: 'mini-task-web',
+    title: 'Mini Task Web Applications',
+    description: 'Small web applications built with various frameworks and technologies.',
+    techStack: ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'Web Development'],
+    githubUrl: 'https://github.com/rohit99-23/mini-task-web',
+    image: '/images/mini-web.jpg',
+    category: 'mini-project',
+    featured: false,
+    taskType: 'project',
+    difficulty: 'beginner'
   },
 
   // Linux Tasks
@@ -189,6 +215,18 @@ export const projectsData: Project[] = [
     taskType: 'task',
     difficulty: 'advanced'
   },
+  {
+    id: 'linux-security',
+    title: 'Linux Security Hardening',
+    description: 'Security hardening and best practices implementation for Linux systems.',
+    techStack: ['Linux', 'Security', 'Hardening', 'Audit', 'Compliance'],
+    githubUrl: 'https://github.com/rohit99-23/linux-security',
+    image: '/images/linux-security.jpg',
+    category: 'linux-task',
+    featured: true,
+    taskType: 'task',
+    difficulty: 'advanced'
+  },
 
   // C++ Projects
   {
@@ -223,19 +261,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/rohit99-23/Game',
     image: '/images/cpp-game.jpg',
     category: 'cpp-project',
-    featured: false,
-    taskType: 'project',
-    difficulty: 'intermediate'
-  },
-  {
-    id: 'cpp-data-structures',
-    title: 'C++ Data Structures Implementation',
-    description: 'Implementation of various data structures including linked lists, trees, and graphs.',
-    techStack: ['C++', 'Data Structures', 'Algorithms', 'OOP', 'Memory Management'],
-    githubUrl: 'https://github.com/rohit99-23/data-structures',
-    image: '/images/cpp-ds.jpg',
-    category: 'cpp-project',
-    featured: false,
+    featured: true,
     taskType: 'project',
     difficulty: 'intermediate'
   },
@@ -255,6 +281,19 @@ export const projectsData: Project[] = [
     difficulty: 'intermediate'
   },
   {
+    id: 'mess-application',
+    title: 'Mess Management Application',
+    description: 'Complete mess management system with user management, billing, and inventory tracking.',
+    techStack: ['Web Development', 'Database', 'User Management', 'Billing System', 'Inventory'],
+    githubUrl: 'https://github.com/rohit99-23/mess-app',
+    liveUrl: 'https://mess-app-demo.netlify.app',
+    image: '/images/mess-app.jpg',
+    category: 'own',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'intermediate'
+  },
+  {
     id: 'devops-automation',
     title: 'DevOps Automation Tools',
     description: 'Collection of automation scripts and tools for DevOps workflows and CI/CD pipelines.',
@@ -265,18 +304,6 @@ export const projectsData: Project[] = [
     featured: true,
     taskType: 'project',
     difficulty: 'advanced'
-  },
-  {
-    id: 'learning-projects',
-    title: 'Learning & Practice Projects',
-    description: 'Various projects created during learning different technologies and frameworks.',
-    techStack: ['Multiple Technologies', 'Learning Projects', 'Practice', 'Skill Development'],
-    githubUrl: 'https://github.com/rohit99-23/learning-projects',
-    image: '/images/learning.jpg',
-    category: 'own',
-    featured: false,
-    taskType: 'project',
-    difficulty: 'beginner'
   }
 ];
 
