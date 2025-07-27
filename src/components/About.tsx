@@ -89,19 +89,29 @@ const About = () => {
             <div className="relative inline-block mb-8">
               <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                  {/* Profile Image - Replace with your actual image */}
+                  {/* Profile Image - Will show if available */}
                   <img 
                     src="/profile.jpg" 
                     alt="Rohit Kumar" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to icon if image doesn't exist
+                    className="w-full h-full object-cover rounded-full hidden"
+                    onLoad={(e) => {
+                      // Show image if it loads successfully
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      target.classList.remove('hidden');
+                      target.nextElementSibling?.classList.add('hidden');
+                    }}
+                    onError={(e) => {
+                      // Keep image hidden if it fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.classList.add('hidden');
                       target.nextElementSibling?.classList.remove('hidden');
                     }}
                   />
-                  <User className="w-24 h-24 text-neon-green hidden" />
+                  {/* Fallback Profile Icon - Always visible by default */}
+                  <div className="flex flex-col items-center justify-center text-center">
+                    <User className="w-24 h-24 text-neon-green mb-2" />
+                    <span className="text-neon-green text-sm font-mono">RK</span>
+                  </div>
                 </div>
               </div>
               {/* DevOps Engineer Badge */}
