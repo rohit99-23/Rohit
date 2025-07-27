@@ -10,12 +10,12 @@ const ProjectsSection: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'All Projects', icon: '📁', count: projectsData.length },
-    { id: 'devops', name: 'DevOps', icon: '🐳', count: getProjectsByCategory('devops').length },
-    { id: 'python-ml', name: 'Python & ML', icon: '🐍', count: getProjectsByCategory('python-ml').length },
-    { id: 'cpp', name: 'C++', icon: '⚡', count: getProjectsByCategory('cpp').length },
-    { id: 'menu-based', name: 'Menu-based', icon: '📋', count: getProjectsByCategory('menu-based').length },
-    { id: 'major', name: 'Major Projects', icon: '🚀', count: getProjectsByCategory('major').length },
-    { id: 'mini', name: 'Mini Projects', icon: '🔧', count: getProjectsByCategory('mini').length }
+    { id: 'docker-task', name: 'Docker Task', icon: '🐳', count: getProjectsByCategory('docker-task').length },
+    { id: 'major-project', name: 'Major Project', icon: '🚀', count: getProjectsByCategory('major-project').length },
+    { id: 'mini-project', name: 'Mini Project', icon: '🔧', count: getProjectsByCategory('mini-project').length },
+    { id: 'linux-task', name: 'Linux Task', icon: '🐧', count: getProjectsByCategory('linux-task').length },
+    { id: 'cpp-project', name: 'C++ Project', icon: '⚡', count: getProjectsByCategory('cpp-project').length },
+    { id: 'own', name: 'Own', icon: '💡', count: getProjectsByCategory('own').length }
   ];
 
   const filteredProjects = activeCategory === 'all' 
@@ -60,7 +60,7 @@ const ProjectsSection: React.FC = () => {
             <span className="text-neon-green">$</span> ls -la projects/
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Explore my diverse portfolio of projects across different technologies and domains
+            Explore my diverse portfolio of projects and tasks across different technologies and domains
           </p>
         </motion.div>
 

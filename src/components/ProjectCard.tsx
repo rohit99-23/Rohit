@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { ExternalLink, Github, Eye, Star } from 'lucide-react';
 import { Project } from '../types/project';
 
 interface ProjectCardProps {
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: "easeOut"
       }
     },
     hover: {
@@ -47,14 +47,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'devops': 'from-blue-500 to-cyan-500',
-      'python-ml': 'from-yellow-500 to-orange-500',
-      'cpp': 'from-blue-600 to-purple-600',
-      'menu-based': 'from-green-500 to-blue-500',
-      'major': 'from-purple-500 to-pink-500',
-      'mini': 'from-orange-500 to-red-500'
+      'docker-task': 'from-blue-500 to-cyan-500',
+      'major-project': 'from-purple-500 to-pink-500',
+      'mini-project': 'from-orange-500 to-red-500',
+      'linux-task': 'from-green-500 to-teal-500',
+      'cpp-project': 'from-blue-600 to-purple-600',
+      'own': 'from-yellow-500 to-orange-500'
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const icons = {
+      'docker-task': '🐳',
+      'major-project': '🚀',
+      'mini-project': '🔧',
+      'linux-task': '🐧',
+      'cpp-project': '⚡',
+      'own': '💡'
+    };
+    return icons[category as keyof typeof icons] || '📁';
+  };
+
+  const getDifficultyColor = (difficulty?: string) => {
+    const colors = {
+      'beginner': 'text-green-400',
+      'intermediate': 'text-yellow-400',
+      'advanced': 'text-red-400'
+    };
+    return colors[difficulty as keyof typeof colors] || 'text-gray-400';
   };
 
   return (
@@ -76,12 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <div className="text-center">
             <div className={`w-16 h-16 mx-auto mb-3 rounded-lg bg-gradient-to-r ${getCategoryColor(project.category)} flex items-center justify-center`}>
               <span className="text-2xl">
-                {project.category === 'devops' && '🐳'}
-                {project.category === 'python-ml' && '🐍'}
-                {project.category === 'cpp' && '⚡'}
-                {project.category === 'menu-based' && '📋'}
-                {project.category === 'major' && '🚀'}
-                {project.category === 'mini' && '🔧'}
+                {getCategoryIcon(project.category)}
               </span>
             </div>
             <p className="text-gray-400 text-sm font-mono">{project.title}</p>
@@ -118,12 +134,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
       {/* Project Content */}
       <div className="p-6">
-        {/* Category Badge */}
-        <div className="flex items-center gap-2 mb-3">
-          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${getCategoryColor(project.category)}`}></div>
-          <span className="text-xs font-mono text-gray-400 uppercase tracking-wider">
-            {project.category.replace('-', ' ')}
-          </span>
+        {/* Category Badge and Difficulty */}
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2">
+            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${getCategoryColor(project.category)}`}></div>
+            <span className="text-xs font-mono text-gray-400 uppercase tracking-wider">
+              {project.category.replace('-', ' ')}
+            </span>
+          </div>
+          {project.difficulty && (
+            <div className={`flex items-center gap-1 text-xs font-mono ${getDifficultyColor(project.difficulty)}`}>
+              <Star className="w-3 h-3" />
+              {project.difficulty}
+            </div>
+          )}
         </div>
 
         {/* Project Title */}

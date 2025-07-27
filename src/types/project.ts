@@ -6,6 +6,8 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   image: string;
-  category: 'devops' | 'python-ml' | 'cpp' | 'menu-based' | 'major' | 'mini';
+  category: 'docker-task' | 'major-project' | 'mini-project' | 'linux-task' | 'cpp-project' | 'own';
   featured?: boolean;
+  taskType?: 'task' | 'project' | 'assignment';
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
 } 
