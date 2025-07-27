@@ -103,6 +103,66 @@ export const projectsData: Project[] = [
     taskType: 'project',
     difficulty: 'advanced'
   },
+  {
+    id: 'customer-churn',
+    title: 'Customer Churn Prediction and Analysis',
+    description: 'Developed a machine learning model to predict customer churn and created an interactive Flask web application to showcase the results. The web application includes a dashboard with two main functionalities.',
+    techStack: ['Python', 'Flask', 'Machine Learning', 'EDA'],
+    githubUrl: 'https://github.com/rohit99-23/customer-churn',
+    image: '/images/customer-churn.jpg',
+    category: 'major-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'advanced'
+  },
+  {
+    id: 'flight-price',
+    title: 'Flight Price Prediction',
+    description: 'Developed a flight price prediction model using advanced data collection, preparation, and cleaning techniques. Visualized trends and patterns, and built a robust machine learning model to forecast prices. Created an interactive web app using Flask, enabling users to predict future flight prices and make informed booking decisions.',
+    techStack: ['Python', 'Flask', 'Machine Learning', 'Data Visualization'],
+    githubUrl: 'https://github.com/rohit99-23/flight-price',
+    image: '/images/flight-price.jpg',
+    category: 'major-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'advanced'
+  },
+  {
+    id: 'heart-disease',
+    title: 'Heart Disease Prediction',
+    description: 'Developed a heart disease prediction model by expertly collecting, preparing, and cleaning medical data. Visualized crucial health trends, built a predictive model using advanced machine learning algorithms, and achieved high accuracy. Created an interactive web app with Flask, enabling real-time heart disease risk assessments.',
+    techStack: ['Python', 'Flask', 'Machine Learning', 'Data Visualization'],
+    githubUrl: 'https://github.com/rohit99-23/heart-disease',
+    image: '/images/heart-disease.jpg',
+    category: 'major-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'advanced'
+  },
+  {
+    id: 'sentiment-analysis',
+    title: 'Text Sentiment Prediction',
+    description: 'Developed an advanced Sentiment Analysis system to classify text as hate speech, love speech, or neutral using deep learning techniques. This project leverages Python and a Kaggle-sourced dataset to build and train a robust model capable of accurate sentiment classification.',
+    techStack: ['Python', 'Deep Learning', 'NLP'],
+    githubUrl: 'https://github.com/rohit99-23/sentiment-analysis',
+    image: '/images/sentiment-analysis.jpg',
+    category: 'major-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'advanced'
+  },
+  {
+    id: 'emotion-detection',
+    title: 'Emotion Detection System',
+    description: 'Developed an emotion detection system utilizing advanced machine learning algorithms to analyze and interpret human emotions from textual data. This portfolio demonstrates my proficiency in natural language processing and sentiment analysis, showcasing the system\'s capability to enhance user experience and drive business intelligence.',
+    techStack: ['Python', 'Machine Learning', 'NLP'],
+    githubUrl: 'https://github.com/rohit99-23/emotion-detection',
+    image: '/images/emotion-detection.jpg',
+    category: 'major-project',
+    featured: true,
+    taskType: 'project',
+    difficulty: 'advanced'
+  },
 
   // Mini Projects
   {

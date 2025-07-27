@@ -71,6 +71,40 @@ const Skills = () => {
       ]
     },
     {
+      title: 'Data Science & ML',
+      icon: <Cloud className="w-8 h-8" />,
+      skills: [
+        { name: 'Python', color: 'from-yellow-500 to-blue-500' },
+        { name: 'Machine Learning', color: 'from-indigo-500 to-purple-500' },
+        { name: 'Deep Learning', color: 'from-pink-500 to-red-500' },
+        { name: 'NLP', color: 'from-green-500 to-blue-500' },
+        { name: 'EDA', color: 'from-orange-500 to-yellow-500' },
+        { name: 'Scikit-Learn', color: 'from-blue-400 to-blue-700' },
+        { name: 'TensorFlow', color: 'from-yellow-400 to-orange-400' },
+        { name: 'Keras', color: 'from-pink-400 to-red-400' }
+      ]
+    },
+    {
+      title: 'Data & Visualization',
+      icon: <Database className="w-8 h-8" />,
+      skills: [
+        { name: 'MySQL/SQL', color: 'from-blue-500 to-blue-700' },
+        { name: 'Power BI', color: 'from-yellow-500 to-yellow-700' },
+        { name: 'Tableau', color: 'from-blue-400 to-blue-600' },
+        { name: 'Excel', color: 'from-green-400 to-green-600' }
+      ]
+    },
+    {
+      title: 'Web & Programming',
+      icon: <Code className="w-8 h-8" />,
+      skills: [
+        { name: 'HTML', color: 'from-orange-500 to-pink-500' },
+        { name: 'CSS', color: 'from-blue-400 to-blue-600' },
+        { name: 'Flask', color: 'from-gray-500 to-gray-700' },
+        { name: 'Javascript', color: 'from-yellow-400 to-orange-400' }
+      ]
+    },
+    {
       title: 'Database & OS',
       icon: <Database className="w-8 h-8" />,
       skills: [

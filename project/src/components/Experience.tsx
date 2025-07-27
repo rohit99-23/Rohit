@@ -8,13 +8,13 @@ const Experience = () => {
       institution: 'Vivekananda Global University, Jaipur',
       period: '2022 - 2026',
       location: 'Jaipur, Rajasthan',
-      description: 'Currently pursuing B.Tech in Computer Science with focus on software development and DevOps practices.',
+      description: 'Currently pursuing B.Tech in Computer Science with focus on software development, data science, and DevOps practices.',
       achievements: [
         { metric: '7.9', label: 'CGPA (Till 6th Sem)', icon: <Award className="w-4 h-4" /> },
         { metric: '2026', label: 'Expected Graduation', icon: <GraduationCap className="w-4 h-4" /> },
         { metric: 'CSE', label: 'Specialization', icon: <TrendingUp className="w-4 h-4" /> }
       ],
-      tech: ['Computer Science', 'Software Engineering', 'DevOps', 'Programming'],
+      tech: ['Computer Science', 'Software Engineering', 'DevOps', 'Data Science'],
       color: 'from-sky-blue to-blue-600',
       type: 'education'
     },
@@ -130,7 +130,7 @@ const Experience = () => {
                     <h4 className={`font-semibold mb-2 ${
                       exp.type === 'education' ? 'text-sky-blue' : 'text-neon-green'
                     }`}>
-                      {exp.institution || exp.company}
+                      {'institution' in exp ? exp.institution : exp.company}
                     </h4>
                     <div className="flex items-center gap-1 text-gray-400 text-sm mb-4">
                       <MapPin className="w-4 h-4" />

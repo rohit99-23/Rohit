@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing Rohit Kumar's skills, projects
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://rohitkumar77.netlify.app)
+[View Portfolio](https://rohitkumar777.netlify.app)
 
 ## ✨ Features
 

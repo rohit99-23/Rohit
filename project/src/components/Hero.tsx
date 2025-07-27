@@ -49,6 +49,9 @@ const Hero = () => {
     }
   };
 
+  // Split the display text into lines for proper styling
+  const displayLines = displayText.split('\n');
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-4 sm:px-6 lg:px-8">
       <div className="text-center z-10 max-w-4xl mx-auto">
@@ -56,20 +59,36 @@ const Hero = () => {
           <div className="text-2xl sm:text-4xl lg:text-6xl font-space-grotesk font-bold text-white leading-tight">
             {/* Name - Large */}
             <div className="text-3xl sm:text-5xl lg:text-7xl mb-4">
-              Hi, I'm Rohit Kumar.
+              {displayLines[0] || ''}
+              {currentLine === 0 && currentChar < lines[0].length && (
+                <span className="animate-pulse text-neon-green">|</span>
+              )}
             </div>
             
             {/* Job Role - Medium */}
-            <div className="text-xl sm:text-2xl lg:text-3xl text-neon-green mb-3 font-medium">
-              DevOps Engineer | Final Year B.Tech CSE
-            </div>
+            {displayLines[1] && (
+              <div className="text-xl sm:text-2xl lg:text-3xl text-neon-green mb-3 font-medium">
+                {displayLines[1]}
+                {currentLine === 1 && currentChar < lines[1].length && (
+                  <span className="animate-pulse text-neon-green">|</span>
+                )}
+              </div>
+            )}
             
             {/* Description - Small */}
-            <div className="text-sm sm:text-lg lg:text-xl text-gray-300 font-normal">
-              Automating the future of software delivery, one pipeline at a time.
-            </div>
+            {displayLines[2] && (
+              <div className="text-sm sm:text-lg lg:text-xl text-gray-300 font-normal">
+                {displayLines[2]}
+                {currentLine === 2 && currentChar < lines[2].length && (
+                  <span className="animate-pulse text-neon-green">|</span>
+                )}
+              </div>
+            )}
             
-            <span className="animate-pulse text-neon-green">|</span>
+            {/* Show cursor if typing is complete */}
+            {currentLine >= lines.length && (
+              <span className="animate-pulse text-neon-green">|</span>
+            )}
           </div>
         </div>
 

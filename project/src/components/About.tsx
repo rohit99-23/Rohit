@@ -10,6 +10,10 @@ const About = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
+            // Remove the opacity-0 class after animation
+            setTimeout(() => {
+              entry.target.classList.remove('opacity-0');
+            }, 1000);
           }
         });
       },
@@ -41,44 +45,7 @@ const About = () => {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Section */}
-          <div className="text-center lg:text-left">
-            <div className="relative inline-block mb-8">
-              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
-                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                  {/* Profile Image - Replace with your actual image */}
-                  <img 
-                    src="/profile.jpg" 
-                    alt="Rohit Kumar" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to icon if image doesn't exist
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  <User className="w-24 h-24 text-neon-green hidden" />
-                </div>
-              </div>
-              {/* DevOps Engineer Badge */}
-              <div className="absolute -bottom-2 -right-2 bg-neon-green text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-gray-900">
-                DevOps Engineer
-              </div>
-            </div>
-            
-            {/* Bio Section */}
-            <div className="text-left max-w-lg">
-              <p className="text-gray-300 leading-relaxed mb-6">
-                I come from a strong technical background with a growing passion for DevOps, automation, and cloud infrastructure. My journey started with exploring development, but I soon found my interest leaning toward solving real-world challenges related to deployment, scalability, and system reliability.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                Over time, I've worked on building CI/CD pipelines, managing cloud resources, and integrating tools like Docker, Jenkins, Git, and AWS to improve workflow efficiency. I enjoy learning new technologies, experimenting with modern DevOps practices, and creating systems that are both stable and flexible.
-              </p>
-            </div>
-          </div>
-
-          {/* Console Log Section */}
+          {/* Console Log Section - Now on the left */}
           <div ref={codeRef} className="opacity-0 transition-opacity duration-1000">
             <div className="bg-gray-900 rounded-lg p-6 border border-neon-green/30 font-mono">
               <div className="flex items-center gap-2 mb-4">
@@ -114,6 +81,53 @@ const About = () => {
                 </div>
                 <span className="text-neon-green">{'}'}</span>
               </div>
+            </div>
+          </div>
+
+          {/* Profile Section - Now on the right */}
+          <div className="text-center lg:text-left">
+            <div className="relative inline-block mb-8">
+              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-r from-neon-green to-sky-blue p-1">
+                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                  {/* Profile Image - Will show if available */}
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Rohit Kumar" 
+                    className="w-full h-full object-cover rounded-full hidden"
+                    onLoad={(e) => {
+                      // Show image if it loads successfully
+                      const target = e.target as HTMLImageElement;
+                      target.classList.remove('hidden');
+                      target.nextElementSibling?.classList.add('hidden');
+                    }}
+                    onError={(e) => {
+                      // Keep image hidden if it fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.classList.add('hidden');
+                      target.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  {/* Fallback Profile Icon - Always visible by default */}
+                  <div className="flex flex-col items-center justify-center text-center">
+                    <User className="w-24 h-24 text-neon-green mb-2" />
+                    <span className="text-neon-green text-sm font-mono">RK</span>
+                  </div>
+                </div>
+              </div>
+              {/* DevOps Engineer Badge */}
+              <div className="absolute -bottom-2 -right-2 bg-neon-green text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-gray-900">
+                DevOps Engineer
+              </div>
+            </div>
+            
+            {/* Bio Section */}
+            <div className="text-left max-w-lg">
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Hello there, I’m Rohit Kumar, passionate about making sense of data and building bridges between development and operations. My journey in DevOps and Data Science is driven by a love for logic, hard work, and an unwavering commitment to understanding and simplifying complex systems.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                I’m proficient in MySQL, Python, Machine Learning, Deep Learning, Natural Language Processing, and Exploratory Data Analysis (EDA). I excel in building CI/CD pipelines, managing cloud resources, and integrating tools like Docker, Jenkins, Git, and AWS to improve workflow efficiency. I enjoy learning new technologies, experimenting with modern DevOps practices, and creating systems that are both stable and flexible. Always eager to connect with like-minded professionals and explore new opportunities in the field of DevOps and Data Science.
+              </p>
             </div>
           </div>
         </div>
